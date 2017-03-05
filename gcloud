@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+# Start the container
+docker run \
+    -it \
+    --rm \
+    --volume gcloud-config:/.config \
+    --volume gcloud-ssh:/.ssh \
+    google/cloud-sdk gcloud $@
